@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/binarytimer/static/css/main.cb291937.chunk.css",
+    "main.css": "/binarytimer/static/css/main.1677950b.chunk.css",
     "main.js": "/binarytimer/static/js/main.78d7cdfe.chunk.js",
     "main.js.map": "/binarytimer/static/js/main.78d7cdfe.chunk.js.map",
     "runtime-main.js": "/binarytimer/static/js/runtime-main.3112db76.js",
@@ -10,14 +10,14 @@
     "static/js/3.28795cd6.chunk.js": "/binarytimer/static/js/3.28795cd6.chunk.js",
     "static/js/3.28795cd6.chunk.js.map": "/binarytimer/static/js/3.28795cd6.chunk.js.map",
     "index.html": "/binarytimer/index.html",
-    "static/css/main.cb291937.chunk.css.map": "/binarytimer/static/css/main.cb291937.chunk.css.map",
+    "static/css/main.1677950b.chunk.css.map": "/binarytimer/static/css/main.1677950b.chunk.css.map",
     "static/js/2.1cbe4146.chunk.js.LICENSE.txt": "/binarytimer/static/js/2.1cbe4146.chunk.js.LICENSE.txt",
     "static/media/logo.2b7a6c31.svg": "/binarytimer/static/media/logo.2b7a6c31.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.3112db76.js",
     "static/js/2.1cbe4146.chunk.js",
-    "static/css/main.cb291937.chunk.css",
+    "static/css/main.1677950b.chunk.css",
     "static/js/main.78d7cdfe.chunk.js"
   ]
 }
