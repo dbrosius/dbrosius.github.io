@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Word Ladder Solver — change one letter at a time</title>
+    <meta
+      name="description"
+      content="Solves word ladder puzzles in your browser: get from a start word to a target word by changing one letter at a time, with every step a real English word."
+    />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#070a12" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230b1020'/%3E%3Cg stroke='%237c6cff' stroke-width='2.2' stroke-linecap='round'%3E%3Cpath d='M11 26V6M21 26V6'/%3E%3Cpath d='M11 11h10M11 16h10M11 21h10'/%3E%3C/g%3E%3C/svg%3E"
+    />
+    <script type="module" crossorigin src="/solver/assets/index-CbJyhfev.js"></script>
+    <link rel="stylesheet" crossorigin href="/solver/assets/index-0NLwYkJo.css">
+  </head>
+  <body>
+    <div class="aurora" aria-hidden="true"></div>
+
+    <header class="masthead">
+      <div class="brand">
+        <span class="mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="26" height="26">
+            <g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+              <path d="M11 26V6M21 26V6" />
+              <path d="M11 11h10M11 16h10M11 21h10" />
+            </g>
+          </svg>
+        </span>
+        <span class="brand-copy">
+          <strong>Word Ladder</strong>
+          <small>one letter at a time</small>
+        </span>
+      </div>
+      <p class="tagline">
+        Find the shortest chain of real English words from any starting letters to a target word of
+        the same length.
+      </p>
+    </header>
+
+    <main>
+      <section class="card" aria-labelledby="puzzle-title">
+        <div class="card-head">
+          <h1 id="puzzle-title">Your puzzle</h1>
+          <span class="len-badge" id="len-badge">5 letters</span>
+        </div>
+
+        <form class="puzzle-form" id="form" novalidate>
+          <div class="inputs">
+            <div class="field">
+              <label for="start">Start word</label>
+              <input
+                id="start"
+                name="start"
+                type="text"
+                autocomplete="off"
+                autocapitalize="characters"
+                autocorrect="off"
+                spellcheck="false"
+                inputmode="text"
+                maxlength="13"
+                placeholder="START"
+                aria-describedby="start-note"
+              />
+              <p class="field-note" id="start-note" data-tone="muted"></p>
+            </div>
+
+            <button type="button" class="swap" id="swap" aria-label="Swap start and target words" title="Swap words">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M7 4v14M3.5 14.5 7 18l3.5-3.5" />
+                  <path d="M17 20V6m3.5 3.5L17 6l-3.5 3.5" />
+                </g>
+              </svg>
+            </button>
+
+            <div class="field">
+              <label for="target">Target word</label>
+              <input
+                id="target"
+                name="target"
+                type="text"
+                autocomplete="off"
+                autocapitalize="characters"
+                autocorrect="off"
+                spellcheck="false"
+                inputmode="text"
+                maxlength="13"
+                placeholder="POOP"
+                aria-describedby="target-note"
+              />
+              <p class="field-note" id="target-note" data-tone="muted"></p>
+            </div>
+          </div>
+
+          <div class="controls">
+            <label class="switch">
+              <input type="checkbox" id="hide-toggle" />
+              <span class="track" aria-hidden="true"></span>
+              <span class="switch-label">Hide the answer</span>
+            </label>
+
+            <div class="actions">
+              <button type="button" class="ghost-btn" id="random-btn">Surprise me</button>
+              <button type="submit" class="primary-btn" id="solve-btn">
+                <span class="btn-label">Solve</span>
+              </button>
+            </div>
+          </div>
+        </form>
+
+        <p class="status" id="status" role="status" aria-live="polite"></p>
+      </section>
+
+      <section class="card" id="answer-card" aria-labelledby="answer-title">
+        <div class="card-head">
+          <h2 id="answer-title">The ladder</h2>
+          <div class="meta" id="answer-meta"></div>
+        </div>
+        <div id="answer-body">
+          <p class="placeholder">
+            Type a starting word and a target word (same length, 2–13 letters), then hit
+            <strong>Solve</strong>. The target must be a real English word; the start can be anything,
+            and every rung after it changes exactly one letter.
+          </p>
+        </div>
+        <div class="answer-actions" id="answer-actions" hidden>
+          <button type="button" class="ghost-btn" id="copy-btn">Copy ladder</button>
+          <button type="button" class="ghost-btn" id="link-btn">Copy link</button>
+          <button type="button" class="ghost-btn" id="reveal-btn" hidden>Reveal all</button>
+        </div>
+      </section>
+
+      <section class="card rules-card">
+        <details>
+          <summary>How it works</summary>
+          <ul>
+            <li>A breadth-first search walks outwards from the target word through the built-in dictionary (one letter changed at a time).</li>
+            <li>Only the target has to be a real word: the starting letters may be nonsense, and the first rung it turns into is.</li>
+            <li>Among all equally short ladders, the one built from the most familiar words is chosen.</li>
+            <li>The chain is always as short as possible; when several chains are equally short, the one built from the most familiar words is chosen.</li>
+            <li>The dictionary is bundled with the page, so the whole puzzle stays on your device.</li>
+          </ul>
+        </details>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <span id="dict-stat">Dictionary loading…</span>
+    </footer>
+  </body>
+</html>
