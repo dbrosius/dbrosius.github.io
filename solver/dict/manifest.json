@@ -1,124 +1,61 @@
 {
   "version": 1,
-  "minLength": 2,
-  "maxLength": 13,
+  "minLength": 3,
+  "maxLength": 6,
   "tierCutoffs": [
     5000,
     18000
   ],
-  "rankedWords": 30016,
+  "rankedWords": 31281,
   "sources": {
     "words": "data/source/words.raw.txt",
-    "frequency": "data/source/frequency.txt"
+    "bigWords": [
+      "data/source/words.scowl.txt",
+      "data/source/words.12dicts.txt"
+    ],
+    "frequency": "data/source/frequency.txt",
+    "blocklist": "data/source/blocklist.txt"
   },
   "lengths": {
-    "2": {
-      "count": 112,
-      "tiers": [
-        53,
-        34,
-        21,
-        4
-      ]
-    },
     "3": {
-      "count": 665,
+      "count": 827,
       "tiers": [
-        284,
-        242,
-        74,
-        65
-      ]
+        293,
+        288,
+        118,
+        128
+      ],
+      "bigOnly": 164
     },
     "4": {
-      "count": 2448,
+      "count": 2806,
       "tiers": [
-        808,
-        847,
-        395,
-        398
-      ]
+        813,
+        879,
+        485,
+        629
+      ],
+      "bigOnly": 362
     },
     "5": {
-      "count": 4685,
+      "count": 5446,
       "tiers": [
-        962,
-        1504,
-        900,
-        1319
-      ]
+        965,
+        1534,
+        1044,
+        1903
+      ],
+      "bigOnly": 764
     },
     "6": {
-      "count": 7402,
+      "count": 8766,
       "tiers": [
         917,
-        2083,
-        1612,
-        2790
-      ]
-    },
-    "7": {
-      "count": 10027,
-      "tiers": [
-        816,
-        2271,
-        2062,
-        4878
-      ]
-    },
-    "8": {
-      "count": 10620,
-      "tiers": [
-        546,
-        2091,
-        2037,
-        5946
-      ]
-    },
-    "9": {
-      "count": 9546,
-      "tiers": [
-        324,
-        1628,
-        1858,
-        5736
-      ]
-    },
-    "10": {
-      "count": 7688,
-      "tiers": [
-        169,
-        1131,
-        1377,
-        5011
-      ]
-    },
-    "11": {
-      "count": 5334,
-      "tiers": [
-        75,
-        656,
-        876,
-        3727
-      ]
-    },
-    "12": {
-      "count": 3385,
-      "tiers": [
-        32,
-        346,
-        521,
-        2486
-      ]
-    },
-    "13": {
-      "count": 1912,
-      "tiers": [
-        14,
-        161,
-        272,
-        1465
-      ]
+        2104,
+        1785,
+        3960
+      ],
+      "bigOnly": 1366
     }
   }
 }

@@ -14,7 +14,7 @@
       rel="icon"
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230b1020'/%3E%3Cg stroke='%237c6cff' stroke-width='2.2' stroke-linecap='round'%3E%3Cpath d='M11 26V6M21 26V6'/%3E%3Cpath d='M11 11h10M11 16h10M11 21h10'/%3E%3C/g%3E%3C/svg%3E"
     />
-    <script type="module" crossorigin src="/solver/assets/index-CbJyhfev.js"></script>
+    <script type="module" crossorigin src="/solver/assets/index-BK3bp3W6.js"></script>
     <link rel="stylesheet" crossorigin href="/solver/assets/index-0NLwYkJo.css">
   </head>
   <body>
@@ -36,8 +36,8 @@
         </span>
       </div>
       <p class="tagline">
-        Find the shortest chain of real English words from any starting letters to a target word of
-        the same length.
+        Find the shortest chain of real English words from any starting letters to a target word,
+        three to six letters long.
       </p>
     </header>
 
@@ -61,7 +61,7 @@
                 autocorrect="off"
                 spellcheck="false"
                 inputmode="text"
-                maxlength="13"
+                maxlength="6"
                 placeholder="START"
                 aria-describedby="start-note"
               />
@@ -88,7 +88,7 @@
                 autocorrect="off"
                 spellcheck="false"
                 inputmode="text"
-                maxlength="13"
+                maxlength="6"
                 placeholder="POOP"
                 aria-describedby="target-note"
               />
@@ -122,7 +122,7 @@
         </div>
         <div id="answer-body">
           <p class="placeholder">
-            Type a starting word and a target word (same length, 2–13 letters), then hit
+            Type a starting word and a target word (same length, 3–6 letters), then hit
             <strong>Solve</strong>. The target must be a real English word; the start can be anything,
             and every rung after it changes exactly one letter.
           </p>
@@ -138,9 +138,9 @@
         <details>
           <summary>How it works</summary>
           <ul>
-            <li>A breadth-first search walks outwards from the target word through the built-in dictionary (one letter changed at a time).</li>
+            <li>A bidirectional breadth-first search grows outwards from the target word and from the start at the same time, through the built-in dictionary (one letter changed at a time), and stops the moment the two meet.</li>
             <li>Only the target has to be a real word: the starting letters may be nonsense, and the first rung it turns into is.</li>
-            <li>Among all equally short ladders, the one built from the most familiar words is chosen.</li>
+            <li>Word lengths are limited to 3–6 letters, where word ladders are actually interesting.</li>
             <li>The chain is always as short as possible; when several chains are equally short, the one built from the most familiar words is chosen.</li>
             <li>The dictionary is bundled with the page, so the whole puzzle stays on your device.</li>
           </ul>
