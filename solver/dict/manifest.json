@@ -14,7 +14,8 @@
       "data/source/words.12dicts.txt"
     ],
     "frequency": "data/source/frequency.txt",
-    "blocklist": "data/source/blocklist.txt"
+    "blocklist": "data/source/blocklist.txt",
+    "poople": "data/source/poople/words.txt"
   },
   "lengths": {
     "3": {
@@ -57,5 +58,17 @@
       ],
       "bigOnly": 1366
     }
-  }
+  },
+  "poople": {
+    "count": 2398,
+    "tiers": [
+      769,
+      785,
+      498,
+      346
+    ],
+    "length": 4,
+    "target": "poop"
+  },
+  "build": "9157424ebb61"
 }

@@ -14,8 +14,8 @@
       rel="icon"
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230b1020'/%3E%3Cg stroke='%237c6cff' stroke-width='2.2' stroke-linecap='round'%3E%3Cpath d='M11 26V6M21 26V6'/%3E%3Cpath d='M11 11h10M11 16h10M11 21h10'/%3E%3C/g%3E%3C/svg%3E"
     />
-    <script type="module" crossorigin src="/solver/assets/index-lC8C1TCU.js"></script>
-    <link rel="stylesheet" crossorigin href="/solver/assets/index-DdnAx_Yo.css">
+    <script type="module" crossorigin src="/solver/assets/index-9uLXTAT_.js"></script>
+    <link rel="stylesheet" crossorigin href="/solver/assets/index-BSLzUtzQ.css">
   </head>
   <body>
     <div class="aurora" aria-hidden="true"></div>
@@ -45,7 +45,7 @@
       <section class="card" aria-labelledby="puzzle-title">
         <div class="card-head">
           <h1 id="puzzle-title">Your puzzle</h1>
-          <span class="len-badge" id="len-badge">5 letters</span>
+          <span class="len-badge" id="len-badge">…</span>
         </div>
 
         <form class="puzzle-form" id="form" novalidate>
@@ -97,6 +97,15 @@
           </div>
 
           <div class="controls">
+            <label class="switch" title="Only words the online game Poople (poople.io) accepts: 4-letter start word, POOP as the target">
+              <input type="checkbox" id="poople-toggle" checked />
+              <span class="track" aria-hidden="true"></span>
+              <span class="switch-label">
+                Poople mode
+                <small>4 letters, ends at POOP</small>
+              </span>
+            </label>
+
             <label class="switch">
               <input type="checkbox" id="hide-toggle" />
               <span class="track" aria-hidden="true"></span>
@@ -121,7 +130,7 @@
           <div class="meta" id="answer-meta"></div>
         </div>
         <div id="answer-body">
-          <p class="placeholder">
+          <p class="placeholder" id="answer-placeholder">
             Type a starting word and a target word (same length, 3–6 letters), then hit
             <strong>Solve</strong>. The target must be a real English word; the start can be anything,
             and every rung after it changes exactly one letter.
@@ -141,6 +150,11 @@
             <li>A bidirectional breadth-first search grows outwards from the target word and from the start at the same time, through the built-in dictionary (one letter changed at a time), and stops the moment the two meet.</li>
             <li>Only the target has to be a real word: the starting letters may be nonsense, and the first rung it turns into is.</li>
             <li>Word lengths are limited to 3–6 letters, where word ladders are actually interesting.</li>
+            <li><strong>Poople mode</strong> (on by default) solves with the dictionary the online game
+              <a href="https://poople.io/" rel="noopener">Poople</a> uses instead of this app's own: the start
+              word is 4 letters, the target is always POOP, and only the words that game
+              accepts count as words. Turn it off for the full dictionary and any target you
+              like; the count in the footer is the live size of whichever list is in use.</li>
             <li>The chain is always as short as possible; when several chains are equally short, the one built from the most familiar words is chosen.</li>
             <li>The dictionary is bundled with the page, so the whole puzzle stays on your device.</li>
           </ul>
