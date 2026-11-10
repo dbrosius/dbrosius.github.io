@@ -542,7 +542,6 @@ needs:0
 nerve:0
 never:0
 niece:0
-nigga:0
 night:0
 ninja:0
 noble:0
@@ -2806,7 +2805,6 @@ execs:2
 exude:2
 fable:2
 facet:2
-fagot:2
 fairs:2
 faker:2
 fakir:2
@@ -3380,7 +3378,6 @@ spuds:2
 spurn:2
 spurt:2
 squab:2
-squaw:2
 stair:2
 staph:2
 stave:2
