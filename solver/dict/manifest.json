@@ -6,7 +6,7 @@
     5000,
     18000
   ],
-  "rankedWords": 31281,
+  "rankedWords": 31252,
   "sources": {
     "words": "data/source/words.raw.txt",
     "bigWords": [
@@ -21,8 +21,8 @@
       "count": 827,
       "tiers": [
         293,
-        288,
-        118,
+        289,
+        117,
         128
       ],
       "bigOnly": 164
@@ -41,8 +41,8 @@
       "count": 5443,
       "tiers": [
         964,
-        1534,
-        1042,
+        1535,
+        1041,
         1903
       ],
       "bigOnly": 764
@@ -51,8 +51,8 @@
       "count": 8760,
       "tiers": [
         916,
-        2102,
-        1785,
+        2105,
+        1782,
         3957
       ],
       "bigOnly": 1366

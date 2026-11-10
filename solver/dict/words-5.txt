@@ -1551,6 +1551,7 @@ hallo:1
 halls:1
 hangs:1
 hanks:1
+hanky:1
 hardy:1
 harem:1
 haste:1
@@ -2904,7 +2905,6 @@ hajji:2
 halal:2
 hales:2
 hammy:2
-hanky:2
 hares:2
 harms:2
 harps:2

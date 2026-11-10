@@ -342,6 +342,7 @@ din:1
 dip:1
 dis:1
 doe:1
+doh:1
 dos:1
 dot:1
 dub:1
@@ -598,7 +599,6 @@ cpd:2
 cps:2
 cur:2
 dob:2
-doh:2
 ebb:2
 eek:2
 eff:2

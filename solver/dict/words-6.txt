@@ -1375,6 +1375,7 @@ dances:1
 dangle:1
 danish:1
 daring:1
+darken:1
 darker:1
 darned:1
 dashed:1
@@ -2179,6 +2180,7 @@ payoff:1
 peachy:1
 peanut:1
 pearls:1
+pearly:1
 pebble:1
 pecker:1
 peeing:1
@@ -2286,6 +2288,7 @@ queasy:1
 queens:1
 queers:1
 quench:1
+quiche:1
 quirky:1
 quoted:1
 quotes:1
@@ -3387,7 +3390,6 @@ dampen:2
 damper:2
 dander:2
 dapper:2
-darken:2
 darkie:2
 darkly:2
 dasher:2
@@ -4101,7 +4103,6 @@ paving:2
 pawing:2
 payout:2
 peaked:2
-pearly:2
 pecans:2
 pecked:2
 pedals:2
@@ -4211,7 +4212,6 @@ quarks:2
 quarts:2
 quasar:2
 queues:2
-quiche:2
 quiets:2
 quills:2
 quilts:2
